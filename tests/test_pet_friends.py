@@ -113,3 +113,4 @@ def test_add_photo_pet_valid_data(pet_photo='images/Maine_Coon_001.jpg'):
     # Проверяем соответствие ответа с ожидаемым результатом
     assert status == 200
     assert result['pet_photo']
+

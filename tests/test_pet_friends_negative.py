@@ -125,3 +125,4 @@ def test_add_new_pet_without_photo_letters_age_negative(name='Гамлет', ani
     # Проверяем соответствие результата с ожидаемым результатом
     assert status == 500
     assert 'name' not in result
+
