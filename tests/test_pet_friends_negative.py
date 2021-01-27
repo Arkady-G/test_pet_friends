@@ -45,7 +45,7 @@ def test_add_new_pet_with_invalid_photo_negative(name='Милорд', animal_typ
     status, result = pf.add_new_pet(auth_key, name, animal_type, age, pet_photo)
 
     # Проверяем соответствие ответа с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'pet_photo' not in result
 
 
@@ -58,7 +58,7 @@ def test_add_new_pet_without_photo_minus_age_negative(name='Граф', animal_ty
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие ответа с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
 
@@ -71,7 +71,7 @@ def test_add_new_pet_without_photo_incredible_age_negative(name='Граф', anim
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие ответа с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
 
@@ -84,7 +84,7 @@ def test_add_new_pet_without_photo_symbol_age_negative(name='Граф', animal_t
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие ответа с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
 
@@ -97,7 +97,7 @@ def test_add_new_pet_without_photo_empty_field_age_negative(name='Милорд',
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие ответа с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
 
@@ -110,7 +110,7 @@ def test_add_new_pet_without_photo_with_space_age_negative(name='Гамлет', 
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие результата с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
 
@@ -123,6 +123,6 @@ def test_add_new_pet_without_photo_letters_age_negative(name='Гамлет', ani
     status, result = pf.add_new_pet_without_photo(auth_key, name, animal_type, age)
 
     # Проверяем соответствие результата с ожидаемым результатом
-    assert status == 500
+    assert status == 400
     assert 'name' not in result
 
